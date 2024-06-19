@@ -13,6 +13,10 @@ from torch import autocast
 from contextlib import nullcontext
 from imwatermark import WatermarkEncoder
 
+
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+
 from ldm.util import instantiate_from_config
 from ldm.models.diffusion.ddim import DDIMSampler
 from ldm.models.diffusion.plms import PLMSSampler
